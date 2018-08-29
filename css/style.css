@@ -11,8 +11,20 @@ body,html{
 	background-size:100vw 100vh;	
 	height: 100vh;
 	box-sizing: border-box;
-	min-width:320px;
-	min-height:40px;
+}
+
+.hero_wrapper{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav_bar{
+	position: fixed;
+	top: 0px;
+	width:100%;
+	height: auto;
+
 }
 
 .nav_bar ul{
@@ -25,9 +37,9 @@ body,html{
     align-items: center;
     flex-wrap:wrap;
 }
-.hero_wrapper{
-	height: 100vh;
-}
+
+
+
 
 .nav_bar li{
 
@@ -64,7 +76,7 @@ body,html{
 	padding-top:  70px;
 	/*position: relative;*/
 	text-align: center;
-	justify-content: flex-start;
+	justify-content:center;
 	height:100vh;`
 	/*top:33.33%;*/
 
@@ -85,7 +97,7 @@ body,html{
 }
 
 .hero a{
-	font-size: 25px;
+	font-size: 4vw;
 	text-decoration: none;
 	text-shadow: none;
 	color:#EFDFFF;
@@ -93,7 +105,7 @@ body,html{
 
 }
 .hero a:hover{
-	font-size: 30px;
+	font-size: 3vw;
 }
 
 h2{
@@ -149,40 +161,78 @@ h2{
 	
  
 }
+
+.members:hover{
+	background-image:linear-gradient(rgba(255,146,24,0.7),rgba(255,255,255,0.7)),url("../images/band.jpg") ;
+	background-size:100% 100%;
+	color: black;
+}
+
+
+
+.history:hover{
+
+	background-image:linear-gradient(rgba(174,19,241,.7),rgba(255,255,255,0.7)),url("../images/ok.jpg") ;
+	background-size:100% 100%;
+	color: black;
+
+}
+
+.know_more:hover{
+
+	background-image:linear-gradient(rgba(247,209,0,.7),rgba(255,255,255,0.7)),url("../images/know.jpeg") ;
+	background-size:100% 100%;
+	color: black;
+	
+ 
+}
 .content p{
 	font-size: 1.462vw;
 }
 
-
-
+/*
 .members a{
 	text-decoration:overline;
-	font-size: 1.1vw;
+	font-size: 1.5vw;
 	text-align: right;
 	color: white;
 	position: relative;
-	top: 4.312vw;
+	bottom: 0px;
 }
 
 .history a{
 	text-decoration:overline;
-	font-size: 1.1vw;
+	font-size: 2vw;
 	text-align: right;
 	color: white;
 	position: relative;
-	bottom: 0.292vw;
+	top:12vh;
 }
 
 .know_more a{
 	text-decoration:overline;
-	font-size: 1.1vw;
+	font-size: 2vw;
 	text-align: right;
 	color: white;
 	position: relative;
-	top:7.38vw;
+	top:12vh;
+}*/
+
+.content a{
+	text-decoration:overline;
+	font-size: 1.5vw;
+	text-align: right;
+	color: white;
+	position: relative;
+	bottom: 0px;
+}
+.content a:hover{
+	font-size: 1.8vw;
+	color: black;
 }
 
 .Foot{
+	margin-top: 3px;
 	display: flex;
 	flex-direction:row;
 	height: 60vh;
@@ -247,23 +297,67 @@ h2{
 
 @media all and  (max-width:600px){
 
+	.nav_bar ul{
+		flex-direction: column;
+		line-height: 15px;
+		font-size: 10px;
+	}
+
 	.content{
 		flex-direction: column;
 		flex-wrap:wrap;
 
 	}
+	.content a:hover{
+		font-size: 10px;
+	}
 
 	.members{
 		flex:3;
 		order:1;
+		font-size: 25px;
 	}
 
 	.history{
 		flex:5;
+		font-size: 25px;
 	}
 	.know_more{
 		flex:1;
 		order:999;
+		font-size: 25px;
+	}
+
+	.members p{
+		
+		font-size: 10px;
+	}
+
+	.history p{
+		font-size: 10px;
+		
+	}
+	.know_more p{
+		font-size: 10px;
+	}
+
+	.members a{
+		
+		font-size: 5px;
+		position: relative;
+		bottom: 0px;
+	}
+
+	.history a{
+		font-size: 5px;
+		position: relative;
+		bottom: 0px;
+
+	}
+	.know_more a{
+		font-size: 5px;
+		position: relative;
+		bottom: 0px;
 	}
 
 	.Foot{
@@ -272,8 +366,11 @@ h2{
 	}
 	.footer_image{
 		flex-basis: 100%;
-		border-bottom:1px  solid white;
 	}
+	.footer_image img{
+			width: 40%;
+			height: 100%;
+	}	
 	.Toggle{
 	flex-basis:100%;
 	flex-direction: row; 
@@ -282,20 +379,29 @@ h2{
 	.Toggle ul{
 		padding: 0px;	
 
-}
+	}
+
+
 	.Toggle_available{
 		flex:3;
 		border-bottom: none;
 		border-right:1px solid white;
-		justify-content: space-between;
+		justify-content: space-around;
+		align-items: stretch;
+		background: black;
 	}
 
 	.Toggle_available li ul li a{
-		font-size: 10px;
+		font-size: 7px;
 		color: white;
-		padding-left:3px;
-		padding-right:3px;
 		letter-spacing:0px;
+
+	}
+
+	.Toggle_available li ul li a:hover{
+		font-size: 10px;
+		text-decoration: blink;
+		
 
 	}
 	
@@ -310,6 +416,10 @@ h2{
 		flex-direction: column;
 		justify-content:space-around;
 		font-size: 10px;
+	}
+	.social i:hover{
+		font-size:15px;
+
 	}
 }
 
